@@ -10,12 +10,16 @@
 		E00ECFBF2B9D56EB00D1DBAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFBE2B9D56EB00D1DBAA /* AppDelegate.swift */; };
 		E00ECFC12B9D56EB00D1DBAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFC02B9D56EB00D1DBAA /* SceneDelegate.swift */; };
 		E00ECFC32B9D56EB00D1DBAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFC22B9D56EB00D1DBAA /* ViewController.swift */; };
-		E00ECFC62B9D56EB00D1DBAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00ECFC42B9D56EB00D1DBAA /* Main.storyboard */; };
 		E00ECFC82B9D56EC00D1DBAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00ECFC72B9D56EC00D1DBAA /* Assets.xcassets */; };
 		E00ECFCB2B9D56EC00D1DBAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00ECFC92B9D56EC00D1DBAA /* LaunchScreen.storyboard */; };
 		E00ECFD62B9D56EC00D1DBAA /* GuessWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFD52B9D56EC00D1DBAA /* GuessWordTests.swift */; };
 		E00ECFE02B9D56EC00D1DBAA /* GuessWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFDF2B9D56EC00D1DBAA /* GuessWordUITests.swift */; };
 		E00ECFE22B9D56EC00D1DBAA /* GuessWordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFE12B9D56EC00D1DBAA /* GuessWordUITestsLaunchTests.swift */; };
+		E00ECFEF2B9D57A400D1DBAA /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFEE2B9D57A400D1DBAA /* GameService.swift */; };
+		E00ECFF12B9D5D6400D1DBAA /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFF02B9D5D6400D1DBAA /* PhotoCell.swift */; };
+		E00ECFF32B9D617000D1DBAA /* GuessWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFF22B9D617000D1DBAA /* GuessWordCell.swift */; };
+		E00ECFF52B9D62C600D1DBAA /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFF42B9D62C600D1DBAA /* Identifier.swift */; };
+		E00ECFF72B9D67AA00D1DBAA /* InputLetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00ECFF62B9D67AA00D1DBAA /* InputLetterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,6 @@
 		E00ECFBE2B9D56EB00D1DBAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00ECFC02B9D56EB00D1DBAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E00ECFC22B9D56EB00D1DBAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E00ECFC52B9D56EB00D1DBAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E00ECFC72B9D56EC00D1DBAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E00ECFCA2B9D56EC00D1DBAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E00ECFCC2B9D56EC00D1DBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		E00ECFDB2B9D56EC00D1DBAA /* GuessWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00ECFDF2B9D56EC00D1DBAA /* GuessWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWordUITests.swift; sourceTree = "<group>"; };
 		E00ECFE12B9D56EC00D1DBAA /* GuessWordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E00ECFEE2B9D57A400D1DBAA /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		E00ECFF02B9D5D6400D1DBAA /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		E00ECFF22B9D617000D1DBAA /* GuessWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWordCell.swift; sourceTree = "<group>"; };
+		E00ECFF42B9D62C600D1DBAA /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		E00ECFF62B9D67AA00D1DBAA /* InputLetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLetterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +110,11 @@
 				E00ECFBE2B9D56EB00D1DBAA /* AppDelegate.swift */,
 				E00ECFC02B9D56EB00D1DBAA /* SceneDelegate.swift */,
 				E00ECFC22B9D56EB00D1DBAA /* ViewController.swift */,
-				E00ECFC42B9D56EB00D1DBAA /* Main.storyboard */,
+				E00ECFF02B9D5D6400D1DBAA /* PhotoCell.swift */,
+				E00ECFEE2B9D57A400D1DBAA /* GameService.swift */,
+				E00ECFF22B9D617000D1DBAA /* GuessWordCell.swift */,
+				E00ECFF62B9D67AA00D1DBAA /* InputLetterCell.swift */,
+				E00ECFF42B9D62C600D1DBAA /* Identifier.swift */,
 				E00ECFC72B9D56EC00D1DBAA /* Assets.xcassets */,
 				E00ECFC92B9D56EC00D1DBAA /* LaunchScreen.storyboard */,
 				E00ECFCC2B9D56EC00D1DBAA /* Info.plist */,
@@ -233,7 +245,6 @@
 			files = (
 				E00ECFCB2B9D56EC00D1DBAA /* LaunchScreen.storyboard in Resources */,
 				E00ECFC82B9D56EC00D1DBAA /* Assets.xcassets in Resources */,
-				E00ECFC62B9D56EB00D1DBAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +269,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00ECFF72B9D67AA00D1DBAA /* InputLetterCell.swift in Sources */,
 				E00ECFC32B9D56EB00D1DBAA /* ViewController.swift in Sources */,
+				E00ECFF12B9D5D6400D1DBAA /* PhotoCell.swift in Sources */,
 				E00ECFBF2B9D56EB00D1DBAA /* AppDelegate.swift in Sources */,
+				E00ECFF52B9D62C600D1DBAA /* Identifier.swift in Sources */,
 				E00ECFC12B9D56EB00D1DBAA /* SceneDelegate.swift in Sources */,
+				E00ECFEF2B9D57A400D1DBAA /* GameService.swift in Sources */,
+				E00ECFF32B9D617000D1DBAA /* GuessWordCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E00ECFC42B9D56EB00D1DBAA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E00ECFC52B9D56EB00D1DBAA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E00ECFC92B9D56EC00D1DBAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +454,6 @@
 				INFOPLIST_FILE = GuessWord/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +480,6 @@
 				INFOPLIST_FILE = GuessWord/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

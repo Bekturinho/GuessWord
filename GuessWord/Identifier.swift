@@ -5,4 +5,10 @@
 //  Created by fortune cookie on 3/9/24.
 //
 
-import Foundation
+import UIKit
+
+extension UICollectionViewCell{
+    static var identifier: String {
+        String(describing: self)
+    }
+}

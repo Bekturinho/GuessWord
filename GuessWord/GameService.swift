@@ -5,4 +5,8 @@
 //  Created by fortune cookie on 3/9/24.
 //
 
-import Foundation
+import UIKit
+
+class GameService{
+    
+}
