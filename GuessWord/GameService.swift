@@ -8,5 +8,13 @@
 import UIKit
 
 class GameService{
+
+    var imagesArray: [String] = ["Image1", "Image2", "Image3", "Image4"]
     
+    var wordToGuess = "griffith"
+    
+    var letters: [Character] = ["g", "r", "f", "c", "t", "h", "u", "i", "i", "f"]
+    
+    var rezerve : [Character] = ["g", "r", "f", "c", "t", "h", "u", "i", "i", "f"]
+
 }

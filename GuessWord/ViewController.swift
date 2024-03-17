@@ -15,13 +15,9 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     
     private var lettersCollectionView: UICollectionView!
     
-    private var imagesArray: [String] = ["Image1", "Image2", "Image3", "Image4"]
+    private var gameServise = GameService()
     
-    private let wordToGuess = "grifith"
-    
-    private var letters: [Character] = ["g", "r", "f", "c", "t", "h", "u", "i", "i"]
-    
-    private lazy var currentUserGuess = Array(repeating: " ", count: wordToGuess.count)
+    private lazy var currentUserGuess = Array(repeating: " ", count: gameServise.wordToGuess.count)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +43,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     
     private func setUpWordsCollectionView(){
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 40, height: 50)
+        layout.itemSize = CGSize(width: 38, height: 50)
         layout.minimumInteritemSpacing = 0
         
         wordCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -125,7 +121,7 @@ extension ViewController: UICollectionViewDataSource{
     }
     func photoCell(at indexPath: IndexPath) -> PhotoCell? {
         guard let cell = photosCollectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.identifier, for: indexPath) as? PhotoCell else { return nil }
-        cell.setImage(named: imagesArray[indexPath.item])
+        cell.setImage(named: gameServise.imagesArray[indexPath.item])
         
         return cell
     }
@@ -149,7 +145,7 @@ extension ViewController: UICollectionViewDataSource{
             return nil
         }
         
-        let letter = letters[indexPath.item]
+        let letter = gameServise.letters[indexPath.item]
         if letter != Character(" ") {
             cell.setLetter(letter)
         } else {
@@ -159,13 +155,13 @@ extension ViewController: UICollectionViewDataSource{
         return cell
     }
     func numberOfItemsForPhotosCollectionView() -> Int {
-        imagesArray.count
+        gameServise.imagesArray.count
     }
     func numberOfItemsForWordCollectionView() -> Int {
         currentUserGuess.count
     }
     func numberOfItemsForLettersCollectionView() -> Int {
-        letters.count
+        gameServise.letters.count
     }
     
 }
@@ -192,19 +188,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
             return
         }
         
-        currentUserGuess[nextIndexWithoutLetter] = String(letters[indexPath.item])
+        currentUserGuess[nextIndexWithoutLetter] = String(gameServise.letters[indexPath.item])
         wordCollectionView.reloadData()
     }
     
     func removeSelectedLetterFromLettersCollectionView(indexPath: IndexPath) {
-        letters[indexPath.item] = Character(" ")
+        gameServise.letters[indexPath.item] = Character(" ")
         lettersCollectionView.reloadData()
     }
     
     func setBackSelectedLetterToLettersCollectionView(indexPath: IndexPath) {
-        guard let indexWithoutLetter = letters.firstIndex(where: { $0 == " " }) else { return }
+        guard let indexWithoutLetter = gameServise.letters.firstIndex(where: { $0 == " " }) else { return }
         
-        letters[indexWithoutLetter] = Character(currentUserGuess[indexPath.item])
+            gameServise.letters[indexWithoutLetter] = Character(currentUserGuess[indexPath.item])
         lettersCollectionView.reloadData()
     }
     
@@ -222,11 +218,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func winOrLose(completion: @escaping (Bool) -> Void){
-        let wordToGuessAsArray = wordToGuess.map { String($0).lowercased() }
+        let wordToGuessAsArray = gameServise.wordToGuess.map { String($0).lowercased() }
         let isAllFilled = currentUserGuess.allSatisfy { $0 != " " }
         if wordToGuessAsArray == currentUserGuess {
             let winAlert = UIAlertController(title: "You Won", message: "Congratulations !", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .cancel)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel){_ in
+                self.getBackToOrigin()
+              
+            }
+            
             winAlert.addAction(okAction)
             self.present(winAlert, animated: true)
             completion(true)
@@ -235,8 +235,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
         else if isAllFilled && wordToGuessAsArray != currentUserGuess {
            print("lose")
             let loseAlert = UIAlertController(title: "You Lose", message: "You want to try again ?", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Yes", style: .default)
-            let tryAgainAction = UIAlertAction(title: "Try Again", style: .default)
+            let cancelAction = UIAlertAction(title: "Yes", style: .default){_ in 
+                self.getBackToOrigin()
+            }
+            let tryAgainAction = UIAlertAction(title: "Try Again", style: .default){_ in
+                self.getBackToOrigin()
+            }
             loseAlert.addAction(cancelAction)
             loseAlert.addAction(tryAgainAction)
             self.present(loseAlert, animated: true)
@@ -244,6 +248,14 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
        }
            
        
+    
+    }
+ 
+    func getBackToOrigin(){
+        currentUserGuess = self.currentUserGuess.map({_ in " "})
+        wordCollectionView.reloadData()
+        gameServise.letters =  self.gameServise.rezerve
+        lettersCollectionView.reloadData()
     }
  
    
